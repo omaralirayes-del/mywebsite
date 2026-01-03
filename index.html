@@ -1,66 +1,60 @@
 <!DOCTYPE html>
 <html lang="ar">
 <head>
-    <meta charset="UTF-8">
-    <title>موقعي الأول</title>
+<meta charset="UTF-8">
+<title>سؤال تفاعلي</title>
+
+<style>
+body{
+    font-family: Arial;
+    direction: rtl;
+    text-align: center;
+    background: #f4f4f4;
+}
+.box{
+    background: white;
+    padding: 20px;
+    margin: 50px auto;
+    width: 300px;
+    border-radius: 10px;
+}
+button{
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+#result{
+    margin-top: 15px;
+    font-weight: bold;
+}
+</style>
 </head>
+
 <body>
 
-    <h1>أهلاً 👋</h1>
-    <p>ده أول موقع أعمله بواسطه VS Code</p>
+<div class="box">
+    <h2>هل تتفق مع الجملة؟</h2>
+    <p>التكنولوجيا بتسهّل حياة الإنسان</p>
 
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="ar">
-<head>
-    <meta charset="UTF-8">
-    <title>موقعي الأول</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <button onclick="answer(true)">✔️ صح</button>
+    <button onclick="answer(false)">❌ غلط</button>
 
-    <h1>أهلاً 👋</h1>
-    <p>ده أول موقع ليا</p>
+    <div id="result"></div>
+</div>
 
-</body>
-</html>
-<img src="images/images.jpeg">
-<button onclick="alert('تم الضغط على الزرار!')">اضغط هنا</button>
-<img src="images/photo2.jpg" alt="صورة جديدة" width="400">
-<br><br>
-<button onclick="alert('تم الضغط على الزرار!')">اضغط هنا</button>
-<!DOCTYPE html>
-<html lang="ar">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>موقعي التعليمي</title>
-</head>
-<body>
-    <!-- Header -->
-    <header style="background-color:#4CAF50; color:white; padding:20px; text-align:center;">
-        <h1>مرحبا بك في موقعي</h1>
-        <p>تعلم البرمجة وتصميم المواقع</p>
-    </header>
+<script>
+function answer(isTrue){
+    let result = document.getElementById("result");
+    if(isTrue){
+        result.innerHTML = "👏 إجابة صح!";
+        result.style.color = "green";
+    }else{
+        result.innerHTML = "❌ إجابة غلط!";
+        result.style.color = "red";
+    }
+}
+</script>
 
-    <!-- Section 1: About -->
-    <section style="padding:20px; background-color:#f4f4f4;">
-        <h2>عن الموقع</h2>
-        <p>هذا موقع تجريبي لتعلم HTML و CSS و الصور.</p>
-        <img src="images/photo1.jpg" alt="صورة توضيحية" width="300">
-    </section>
-
-    <!-- Section 2: Contact -->
-    <section style="padding:20px; background-color:#e0e0e0;">
-        <h2>تواصل معنا</h2>
-        <p>يمكنك الضغط على الزرار للتجربة:</p>
-        <button onclick="alert('تم الضغط!')">اضغط هنا</button>
-    </section>
-
-    <!-- Footer -->
-    <footer style="text-align:center; padding:10px; background-color:#333; color:white;">
-        &copy; 2026 موقعي التعليمي
-    </footer>
 </body>
 </html>
